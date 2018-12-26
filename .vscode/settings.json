@@ -1,0 +1,47 @@
+{
+    // default python set
+    "python.pythonPath": "${workspaceFolder}/.venv/Scripts/python",
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/.venv/Lib",
+        "${workspaceFolder}/.venv/Lib/site-packages" ],
+    "python.autoComplete.addBrackets": true,
+    //https://code.visualstudio.com/docs/python/unit-testing
+    "python.envFile": "${workspaceFolder}/.env",
+    //"python.unitTest.parentTestFile": 
+    //"python.unitTest.outputWindow": "Python Test Log"
+    "python.unitTest.autoTestDiscoverOnSaveEnabled": false,
+    "python.unitTest.nosetestsEnabled": false,
+    "python.unitTest.unittestEnabled": false,
+    // "python.unitTest.unittestArgs":[
+    //     "--verbose",
+    //     "--top-level-directory",
+    //         ".",
+    //     "--start-directory",
+    //         "./tests",
+    //     "--pattern",
+    //         "test*.py",
+    // ]
+    "python.unitTest.pyTestEnabled": true,
+    "python.unitTest.pyTestPath": "${workspaceRoot}/.venv/Scripts/pytest",
+    "python.unitTest.pyTestArgs": [
+        "--verbose",
+        "--capture=no",
+        "tests"
+    ],
+
+
+
+    // // pydev setup
+    // set env JAVA_HOME instead!
+    // "python.pydev.java.home": "E:/programs/Windows/jre1.8.0_191",
+    // "python.pydev.pythonPath": ["${workspaceFolder}/.venv/Scripts/"],
+    //"python.pydev.pythonExecutable": "${workspaceFolder}/.venv/Scripts/python",
+    // When format on type is turned on, PyDev will automatically
+    // add some of its auto-editions (such as adding self on a method 
+    // automatically or closing a method with ):).
+
+
+    
+    "editor.formatOnType": true,
+    "editor.tabCompletion": "on"
+}

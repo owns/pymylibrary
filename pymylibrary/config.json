@@ -1,0 +1,57 @@
+{
+    "version" : "1.0.0",
+    "app.folder" : "~/.pymylibrary/",
+    "app.config" : "config.json",
+    "app.watch.folders": [
+        "E:\\other\\movies"
+    ],
+    "app.dbfile": "resources/my.db",
+    "pymediainfo.library_file" : "resources/MediaInfo.dll",
+    "logging.folder" : "logs",
+    "logging.config" : {
+        "version" : 1,
+        "disable_existing_loggers": false,
+        "formatters": {
+            "brief": {"format": "%(message)s"},
+            "default": {"format": "%(asctime)-23s:%(levelname)-8s:%(name)-12s.%(funcName)s:%(message)s"},
+            "thread": {"format": "%(asctime)-23s:%(threadName)-10s:%(levelname)-7s:%(name)s.%(funcName)s:%(message)s"}
+        },
+        "handlers": {
+            "console": {
+                "class": "logging.StreamHandler",
+                "stream": "ext://sys.stdout",
+                "formatter": "default",
+                "level": "DEBUG"
+            },            
+            "file": {
+                "class": "logging.handlers.RotatingFileHandler",
+                "level": "DEBUG",
+                "formatter": "default",
+                "filename": "logs/debug.log",
+                "maxBytes": 3145728,
+                "backupCount": 3,
+                "encoding": "utf8"
+            }
+        },
+
+        "loggers": {
+            "pymylibrary.__main__": {
+                "level": "DEBUG",
+                "propagate": true
+            },
+            "sqlalchemy": {
+                "level": "WARN",
+                "propagate": true
+            },
+            "sqlalchemy.engine": {
+                "level": "WARN",
+                "propagate": true
+            }
+        },
+
+        "root": {
+            "handlers": ["console", "file"],
+            "level": "DEBUG"
+        }
+    }
+}
